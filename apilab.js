@@ -6,16 +6,28 @@ $.get(url).done( (data) => {
 
 
 $.get(url).done( (data) => {
-    for (i =0; i <data.data.children.length; i++) {  
+    for (i =0; i <10; i++) {  
     console.log(data.data.children[i].data.thumbnail);
     let target= $("#picture");
     let title= data.data.children[i].data.title;
    
+   
     target.append(`<a href="${data.data.children[i].data.url}"><p>${i}</p><img src="${data.data.children[i].data.thumbnail}"/></a>`);
     $(target.append(title)).css({"color": "white", "font-size": "200%", "display": "flex", "margin": "20px"});
 }
+}).fail( () => {
+    console.log("you have failed");
+}).always( () => {
+    console.log("this will always display");
 });
 
+
+
+
+ //if want to you put first 5 images into a flexbox.
+ // then/ catch works if you switch out the words. 
+ // you can change the sub-reddit if you have the url within the $.get and save this ${the name} into a variable
+ 
 
 
 // $.get("https://www.reddit.com/r/aww/.json").then(function (json) {
