@@ -1,0 +1,15 @@
+#picture {
+    display: flexbox;
+    padding: 20px;
+    color: white;
+   
+   
+}
+body {
+    background-color: dimgray;
+    margin: 20px;
+}
+
+a {
+    margin: 20px;
+}
